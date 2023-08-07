@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CustomNavigationView" customModule="Movies" customModuleProvider="target">
+            <connections>
+                <outlet property="backTitleButton" destination="xeg-a5-UmY" id="ZqQ-YJ-0CC"/>
+                <outlet property="contentView" destination="iN0-l3-epB" id="ShA-cJ-02f"/>
+                <outlet property="searchBar" destination="M0x-hX-XAC" id="fzK-bu-FEg"/>
+                <outlet property="searchBarLeadingConstraint" destination="mff-RI-QVD" id="sCh-e9-DUk"/>
+                <outlet property="searchButton" destination="Na0-vi-dks" id="pWD-YY-0yc"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="50"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xeg-a5-UmY">
+                    <rect key="frame" x="0.0" y="0.0" width="363" height="50"/>
+                    <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="18"/>
+                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <inset key="titleEdgeInsets" minX="20" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    <inset key="imageEdgeInsets" minX="10" minY="0.0" maxX="10" maxY="0.0"/>
+                    <state key="normal">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <imageReference key="image" image="arrow.backward" catalog="system" symbolScale="large"/>
+                    </state>
+                    <state key="highlighted">
+                        <imageReference key="image" image="arrow.backward" catalog="system" symbolScale="large"/>
+                    </state>
+                    <connections>
+                        <action selector="didSelectBackButton:" destination="-1" eventType="touchUpInside" id="QPL-PI-hhk"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Na0-vi-dks">
+                    <rect key="frame" x="363" y="-0.5" width="51" height="51"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="51" id="fnG-5U-kBb"/>
+                        <constraint firstAttribute="width" constant="51" id="qXn-Md-mOR"/>
+                    </constraints>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" image="magnifyingglass" catalog="system">
+                        <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </buttonConfiguration>
+                    <connections>
+                        <action selector="didSelectSearchButton:" destination="-1" eventType="touchUpInside" id="iMr-3L-Opv"/>
+                    </connections>
+                </button>
+                <searchBar contentMode="redraw" barStyle="black" translatesAutoresizingMaskIntoConstraints="NO" id="M0x-hX-XAC">
+                    <rect key="frame" x="414" y="-0.5" width="0.0" height="51"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <color key="barTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="CBP-SK-w39"/>
+                    </connections>
+                </searchBar>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="Na0-vi-dks" secondAttribute="trailing" id="2Sj-dx-dAB"/>
+                <constraint firstItem="Na0-vi-dks" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="9vF-fg-zb5"/>
+                <constraint firstItem="xeg-a5-UmY" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="Q71-kQ-zLA"/>
+                <constraint firstItem="xeg-a5-UmY" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="T63-Fy-rDt"/>
+                <constraint firstAttribute="bottom" secondItem="xeg-a5-UmY" secondAttribute="bottom" id="apt-eF-paZ"/>
+                <constraint firstItem="M0x-hX-XAC" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="gQN-iA-61s"/>
+                <constraint firstItem="Na0-vi-dks" firstAttribute="leading" secondItem="xeg-a5-UmY" secondAttribute="trailing" id="goC-Vo-8af"/>
+                <constraint firstItem="M0x-hX-XAC" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="trailing" id="mff-RI-QVD"/>
+                <constraint firstItem="M0x-hX-XAC" firstAttribute="trailing" secondItem="iN0-l3-epB" secondAttribute="trailing" id="uSf-RR-c41"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="128.98550724637681" y="-78.013392857142847"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="arrow.backward" catalog="system" width="128" height="98"/>
+        <image name="magnifyingglass" catalog="system" width="128" height="115"/>
+    </resources>
+</document>
