@@ -1,5 +1,5 @@
 # Movies
-# A fully functional example project written in Swift showing to display movies’ list in staggered view with a feature to search within a list
+A fully functional example project written in Swift showing to display movies’ list in staggered view with a feature to search within a list
 
 
 • This Project is developed with MVVM architectural pattern
